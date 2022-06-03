@@ -17,8 +17,8 @@ jobs:
       
     - name: Fix issue with repository ownership
       run: |
-        git config --global --add safe.directory /home/runner/work/bsm/bsm
-        git config --global --add safe.directory /home/runner/work/bsm
+        git config --global --add safe.directory /home/runner/work/emob/emob
+        git config --global --add safe.directory /home/runner/work/emob
         git config --global --add safe.directory /home/runner/work
         git config --global --add safe.directory /home/runner
         git config --global --add safe.directory /home
