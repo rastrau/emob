@@ -15,17 +15,6 @@ jobs:
     - name: Checkout the repository
       uses: actions/checkout@v2
       
-    - name: Fix issue with repository ownership
-      run: |
-        git config --global --add safe.directory /home/runner/work/emob/emob
-        git config --global --add safe.directory /home/runner/work/emob
-        git config --global --add safe.directory /home/runner/work
-        git config --global --add safe.directory /home/runner
-        git config --global --add safe.directory /home
-        git config --global --add safe.directory /github/workspace
-        git config --global --add safe.directory /github
-        git config --global --add safe.directory /      
-    
     - name: Set up Python 3.9
       uses: actions/setup-python@v2
       with:
@@ -41,7 +30,7 @@ jobs:
         python emo.py
    
     - name: Push data to repo
-      uses: github-actions-x/commit@v2.7
+      uses: github-actions-x/commit@v2.9
       with:
         push-branch: 'main'
         commit-message: 'Add current data'
